@@ -1,5 +1,9 @@
 # Intersection Algorithms
 
+TODO: Please note that your writing must be original and based on your
+own understanding of the concepts. Assignment with non-original writing
+will not be graded.
+
 ## Add Your Name Here
 
 ## Program Output With Profiling, use eight fenced code blocks.
@@ -7,34 +11,34 @@
 TODO: Do not run the program with the `--display` option when conducting
 experiments!
 
-### Two outputs from running the `ListSingle` algorithm with different inputs.
+### Two outputs from running the ListSingle algorithm with different inputs.
 
-TODO: Summary of the runs for the ListSingle algorithm:
-Run 1: ListSingle with a small input
-Run 2: ListSingle with a large input
+TODO: Summary of the runs for the `ListSingle` algorithm:
+Run 1: `ListSingle` with a small input
+Run 2: `ListSingle` with a large input
 
-### Two outputs from running the `ListDouble` algorithm with different inputs.
+### Two outputs from running the ListDouble algorithm with different inputs.
 
-TODO: Summary of the runs for the ListDouble algorithm:
-Run 1: ListDouble with a small input
-Run 2: ListDouble with a large input
+TODO: Summary of the runs for the `ListDouble` algorithm:
+Run 1: `ListDouble` with a small input
+Run 2: `ListDouble` with a large input
 please use the same "small" and "large" inputs as above
 
-### Two outputs from running the `TupleSingle` algorithm with different inputs.
+### Two outputs from running the TupleSingle algorithm with different inputs.
 
-TODO: Summary of the runs for the TupleSingle algorithm:
-Run 1: TupleSingle with a small input
-Run 2: TupleSingle with a large input
+TODO: Summary of the runs for the `TupleSingle` algorithm:
+Run 1: `TupleSingle` with a small input
+Run 2: `TupleSingle` with a large input
 please use the same "small" and "large" inputs as above
 
-### Two outputs from running the `TupleDouble` algorithm with different inputs.
+### Two outputs from running the TupleDouble algorithm with different inputs.
 
-TODO: Summary of the runs for the ListDouble algorithm:
-Run 1: ListDouble with a small input
-Run 2: ListDouble with a large input
+TODO: Summary of the runs for the `TupleDouble` algorithm:
+Run 1: `TupleDouble` with a small input
+Run 2: `TupleDouble` with a large input
 please use the same "small" and "large" inputs as above
 
-### Justification of your choice for the `numelems` and `maximum` variables.
+### Justification of your choice for the numelems and maximum variables.
 
 TODO: Document and justify your choice for the `numelems` and `maximum` variables.
 
@@ -42,15 +46,15 @@ TODO: Document and justify your choice for the `numelems` and `maximum` variable
 
 TODO: Fill in the table in markdown to summarize the profile timing data.
 For a valid empirical comparison, you must have at least one row below with
-complete data.
+complete data. Abbreviation ls stands for list single, td tuple double etc.
 
 | numelems | maximum | approach ls | approach ld | approach ts | approach td |
 |----------|---------|-------------|-------------|-------------|-------------|
 
-TODO: Provide three paragraphs that explain which algorithm is fastest, by how
-much it is faster*** compute it!
-and how you knew that the it was faster, referencing the data
-in the aforementioned command outputs / data table to support your response.
+TODO: Explain which algorithm is fastest and by how much it is faster. I.e.,
+compute differences using the formula given in Prime Testing. Hold the denominator
+constant. Your calculations should use the data in the data table.
+
 You should make sure that you answer the following research questions (RQs):
 
 - RQ: Is intersection faster with a list or a tuple?

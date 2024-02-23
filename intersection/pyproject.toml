@@ -15,36 +15,24 @@ typer = {extras = ["all"], version = "^0.6.1"}
 
 [tool.poetry.dev-dependencies]
 taskipy = "^1.8.1"
-flake8 = "^3.9.2"
-pydocstyle = "^6.1.1"
-pylint = "^2.10.2"
 mypy = "^0.910"
 pytest = "^7.0.1"
-black = "^22.8.0"
 pymarkdownlnt = "^0.9.8"
+ruff = "^0.2.2"
 
 [tool.taskipy.tasks]
-black = { cmd = "black intersection tests --check", help = "Run the black checks for source code format" }
-fiximports = { cmd = "isort intersection tests", help = "Run isort to fix source code imports" }
-fixformat = { cmd = "black intersection tests", help = "Run the black checks for source code format" }
-isort = { cmd = "isort -c intersection tests", help = "Run the isort checks for source code" }
-flake8 = { cmd = "flake8 intersection tests", help = "Run the flake8 checks for source code documentation" }
+ruff = { cmd = "ruff check --preview --no-show-source", help = "Run the ruff checks for source code format and linting" }
+fix = { cmd = "ruff --fix", help = "Fix the fixable ruff errors in source code format" }
+ruffdetails = { cmd = "ruff check --preview", help = "Run the ruff checks for source code format and linting" }
 markdownlint = { cmd = "poetry run pymarkdown --config .pymarkdown.cfg scan ../writing/reflection.md ../README.md", help = "Run the markdown linter on writing" }
 mypy = { cmd = "poetry run mypy intersection", help = "Run the mypy type checker for potential type errors" }
-pydocstyle = { cmd = "pydocstyle intersection tests", help = "Run the pydocstyle checks for source code documentation" }
-pylint = { cmd = "pylint intersection tests", help = "Run the pylint checks for source code documentation" }
 test = { cmd = "pytest -x -s", help = "Run the pytest test suite" }
 test-silent = { cmd = "pytest -x --show-capture=no", help = "Run the pytest test suite without showing output" }
-all = "task black && task isort && task flake8 && task markdownlint && task mypy && task pydocstyle && task pylint && task test"
-lint = "task black && task isort && task flake8 && task markdownlint && task mypy && task pydocstyle && task pylint"
-
-[tool.isort]
-include_trailing_comma = true
-force_single_line = true
-force_grid_wrap = 0
-use_parentheses = true
-ensure_newline_before_comments = true
-line_length = 88
+all = "task ruff && task markdownlint && task mypy && task test"
+black = { cmd = "echo Ruff has replaced black, isort, flake8, pylint, pydocstyle. See pyproject.toml" }
+isort = { cmd = "echo Ruff has replaced black, isort, flake8, pylint, pydocstyle. See pyproject.toml" }
+flake8 = { cmd = "echo Ruff has replaced black, isort, flake8, pylint, pydocstyle. See pyproject.toml" }
+pylint = { cmd = "echo Ruff has replaced black, isort, flake8, pylint, pydocstyle. See pyproject.toml" }
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
